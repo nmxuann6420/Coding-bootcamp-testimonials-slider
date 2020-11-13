@@ -1,0 +1,25 @@
+:root {
+    --white-color: #fff;
+    --dark-bule-color: hsl(240, 38%, 20%);
+    --grayish-blue-color: hsl(240, 18%, 77%);
+    --height-picture-person: 450px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
