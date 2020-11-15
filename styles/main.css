@@ -1,12 +1,6 @@
 .container {
-    /* padding: 0 150px; */
-    background-color: greenyellow;
-}
-
-.slider-wrapper {
     width: 1440px;
     position: relative;
-    /* background-color: orchid; */
     padding: 100px 150px;  
 }
 
@@ -15,10 +9,17 @@
     display: flex;
 }
 
+.slider--active {
+    display: none;
+}
+
 @media screen and (min-width: 375px) and (max-width: 740px) {
     .container {
         padding: 0;
         height: 750px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .slider {
@@ -26,60 +27,169 @@
         width: 340px;
         height: 700px;
         padding: 30px;
+        position: relative;
+        margin: 100px 0;
     }
 }
 
 .slider__image-quotes {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 164px;
+    left: 322px;
 }   
 
 .slider__image-bg {
-    width: 40%;
+    width: 600px;
+    height: 548px;
     position: absolute;
     top: 48px;
-    right: 92px;
+    right: 120px;
     z-index: 1;
-    /* display: none; */
 }
 
 .slider__image-curve {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -55px;
+    left: -50px;
 }
 
 @media screen and (min-width: 375px) and (max-width: 740px) {
+    .slider__image-quotes {
+        width: 70px;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .slider__image-bg {
-        width: calc(100% + 10px);
+        position: absolute;
+        width: 360px;
         height: 340px;
         top: -3px;
         right: -9px;
     }
+
+    .slider__image-curve {
+        width: 350px;
+        height: 80px;
+        bottom: -70px;
+    }
 }
 
 .slider__content {
-    width: calc(100% -450px);
-    background-color: greenyellow;
+    width: calc(100% - 500px);
+    padding-top: 100px;
+    position: relative;
+    left: 76px;
+    z-index: 3;
+    /* animation: slideAppear linear 0.9s; */
 }
 
 @media screen and (min-width: 375px) and (max-width: 740px) {
     .slider__content {
-        width: 100%;
-        height: 450px;
+        width: calc(100% + 60px);
+        height: calc(100% - var(--width-picture-person));
+        position: unset;
+        transform: translateX(-30px) translateY(85px);
+        padding-top: 0;
+        text-align: center;
     }
 }
+
+.content__description {
+    color: var(--dark-bule-color);
+    font-weight: 300;
+}
+
+.content__name-and-job {
+    display: flex;
+}
+
+.name {
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--dark-bule-color);
+    font-weight: 700;
+}
+
+.job {
+    font-size: 20px;
+    color: var(--grayish-blue-color);
+    font-weight: 500;
+}
+
+@media screen and (min-width: 375px) and (max-width: 740px) {
+    .content__description {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .content__name-and-job {
+        display: block;
+    }
+
+    .job {
+        margin: -15px 0 10px;
+    }
+}
+
+.slide__image {
+    position: relative;
+    box-shadow: 0 25px 18px 8px hsl(240deg 6% 90%);
+}
+
 
 .slide__image-person {
     width: 450px;
     z-index: 2;
     border-radius: 4px;
+    position: relative;
 }
 
 @media screen and (min-width: 375px) and (max-width: 740px) {
+    .slide__image {
+        height: var(--width-picture-person);
+        box-shadow: 3px 57px 18px 4px hsl(240deg 6% 90%);
+    }
     .slide__image-person {
         width: 100%;
-        height: 450px;
+    }
+}
+
+.slider__next-slide {
+    width: 110px;
+    height: 50px;
+    position: absolute;
+    bottom: 75px;
+    right: 508px;
+    background-color: var(--white-color);
+    border-radius: 100px;
+    display: flex;
+    z-index: 2;
+}
+
+.slider__next-link {
+    text-decoration: none;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__next-link:first-child:hover {
+    border-radius: 999px 0 0 999px;
+    background-color: rgba(168, 167, 167, 0.22);
+}
+
+.slider__next-link:last-child:hover {
+    border-radius: 0 999px 999px 0;
+    background-color: rgba(168, 167, 167, 0.22);
+}
+
+@media screen and (min-width: 375px) and (max-width: 740px) {
+    .slider__next-slide {
+        top: 284px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

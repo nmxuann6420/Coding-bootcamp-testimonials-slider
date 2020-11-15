@@ -25,28 +25,44 @@
 <body>
 
   <section class="container">
-    <div class="slider-wrapper">
-      <div class="slider">
-        <!-- <img src="/images/pattern-quotes.svg" alt="" class="slider__image-quotes"> -->
-        <img src="/images/pattern-bg.svg" alt="" class="slider__image-bg">
-        <!-- <img src="/images/pattern-curve.svg" alt="" class="slider__image-curve"> -->
-        <div class="slider__content">
-          <span class="content__description">
-            “ I’ve been interested in coding for a while but never taken the jump, until now.
-            I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-            excited about the future. ”
-          </span>
-          <div class="content__name-and-job">
-            <p class="name">
-              Tanya Sinclair
-            </p>
-            <p class="job">UX Engineer</p>
-          </div>
+    <div class="slider">
+      <img src="/images/pattern-quotes.svg" alt="" class="slider__image-quotes">
+      <img src="/images/pattern-bg.svg" alt="" class="slider__image-bg">
+      <img src="/images/pattern-curve.svg" alt="" class="slider__image-curve">
+      <div class="slider__content">
+        <p class="content__description">
+          “ I’ve been interested in coding for a while but never taken the jump, until now.
+          I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+          excited about the future. ”
+        </p>
+        <div class="content__name-and-job">
+          <p class="name">
+            Tanya Sinclair
+          </p>
+          <p class="job">UX Engineer</p>
         </div>
+      </div>
+      <div class="slide__image">
         <img src="/images/image-tanya.jpg" alt="person picture" class="slide__image-person">
       </div>
+
+      <div class="slider__next-slide">
+        <a href="" class="slider__next-link">
+          <img src="/images/icon-prev.svg" alt="" class="next-slide__prev">
+        </a>
+        <a href="" class="slider__next-link">
+          <img src="/images/icon-next.svg" alt="" class="next-slide__next">
+        </a>
+      </div>
     </div>
-  </section> 
+
+  </section>
+
+  <script src="index.js"></script>
+
+  <script>
+    slide();
+  </script>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

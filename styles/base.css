@@ -2,7 +2,7 @@
     --white-color: #fff;
     --dark-bule-color: hsl(240, 38%, 20%);
     --grayish-blue-color: hsl(240, 18%, 77%);
-    --height-picture-person: 450px;
+    --width-picture-person: 280px;
 }
 
 * {
@@ -22,4 +22,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes slideAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
